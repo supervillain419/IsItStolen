@@ -1,6 +1,6 @@
 # Is It stolen
 
-<img src="home.png" />
+<img src="screenshots/home.png" />
 
 ## "Is It Stolen" is a web application you can search the serial number of a bicycle, e-scooter or other objects to check if it is stolen. You can also login and add your own serial number
 ### We used
