@@ -1,6 +1,5 @@
 <?php 
 include("header.php");
-session_start();
 ?>
 
 <div class="login-wrapper">
@@ -11,12 +10,12 @@ session_start();
           <label for="email">Email</label>
         </div>
         <div class="input-group">
-          <input type="password" name="loginPassword" id="pwd" required/>
-          <label for="loginPassword">Password</label>
+          <input type="password" name="password" id="pwd" required/>
+          <label for="password">Password</label>
           <p>You dont have an account? <a href="sign-up.php">Sign Up</a></p>
           </br>
         </div>
-        <input type="submit" value="Login" class="submit-btn" id="submit"/>
+        <input type="submit" name="submit" value="Login" class="submit-btn" id="submit"/>
       </form>
     </div>
 

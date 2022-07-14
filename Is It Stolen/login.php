@@ -2,10 +2,11 @@
 <?php
 	$error= NULL;
 	if(isset($_POST['submit'])){
+		//$username=$_POST['username'];
 		$email=$_POST['email'];
-		$password=$_POST['pwd'];
+		$_SESSION['email']=$email;
+		$password=$_POST['password'];
 		$salt='$6$okay';
-        echo "HELLLOP";
 		
 		/*if(strlen($username)<5){
 			$error="<p>Your username must be at least 5 characters</p>";
@@ -22,11 +23,11 @@
 				$stmt->execute(['email' => $email]);
 		
 				$record = $stmt -> fetch();
-				if ($record['email'] == $email && $record['password'] == crypt($_POST['pwd'], $record['salt'])) {
+				if ($record['email'] == $email && $record['password'] == crypt($_POST['password'], $record['salt'])) {
 					//$_SESSION['active'] = 1;
 					//$_SESSION['username'] = $username;
 					$_SESSION['email'] = $email;
-					header('Location: index.php');
+					header('Location: logged_in.php');
 				} else {
 					header('Location: index.php?msg=Username or password is wrong..');
 					//echo crypt($_POST['password'], $record['salt']);

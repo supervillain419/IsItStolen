@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <html>
     <head>
         <meta name="viewport" content="width=device=width, initial-scale=1.0">
@@ -14,7 +15,15 @@
                     <ul>
                         <li><a href="index.php"> HOME <i class="fa fa-home"></i></a></li>
                         <li><a href="about.php"> ABOUT <i class="fa fa-bicycle"></i></a></li>
-                        <li><a href="login-form.php"> LOGIN <i class="fa fa-user"></i></a></li>
+                        <!--<li><a href="login-form.php"> LOGIN <i class="fa fa-user"></i></a></li>-->
+                        <?php 
+                            if(isset($_SESSION['email'])){
+                                echo '<li><a href="login-form.php"> ADD <i class="fa fa-plus"></i></a></li>';
+                                echo '<li><a href="logout.php"> LOGOUT <i class="fa fa-user"></i></a></li>';
+                            }else{
+                                echo '<li><a href="login-form.php"> LOGIN <i class="fa fa-user"></i></a></li>';
+                            }
+                        ?>
                     </ul>
                 </nav>
             </div>

@@ -1,5 +1,4 @@
-<?php include("header.php");
-session_start();?>
+<?php include("header.php"); ?>
 
 <div class="login-wrapper">
       <form action="signup.php" class="form" method="POST">
@@ -14,16 +13,16 @@ session_start();?>
         </div>
         
         <div class="input-group">
-          <input type="password" name="loginPassword" id="pwd" required/>
-          <label for="loginPassword">Password</label>
+          <input type="password" name="password" id="pwd" required/>
+          <label for="password">Password</label>
         </div>
         <div class="input-group">
-          <input type="password" name="confirm-pass" id="pwdre" required/>
-          <label for="loginPassword">Confirm Password</label>
+          <input type="password" name="passwordre" id="pwdre" required/>
+          <label for="passwordre">Confirm Password</label>
           <p>You already have an account? <a href="login-form.php">Log In</a></p>
           </br>
         </div>
-        <input type="submit" value="Sign Up" class="submit-btn" />
+        <input type="submit" name="submit" value="Sign Up" class="submit-btn" />
       </form>
     </div>
 
