@@ -1,5 +1,6 @@
 <?php 
 include("header.php");
+require("function.php");
 ?>
 
 <div class="login-wrapper">
@@ -16,7 +17,9 @@ include("header.php");
           </br>
         </div>
         <input type="submit" name="submit" value="Login" class="submit-btn" id="submit"/>
+        <p><?php echo_msg();?></p>
       </form>
+      
     </div>
 
 <?php include("footer.php"); ?>

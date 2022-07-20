@@ -4,7 +4,7 @@
 	if(isset($_POST['submit'])){
 		//$username=$_POST['username'];
 		$email=$_POST['email'];
-		$_SESSION['email']=$email;
+		//$_SESSION['email']=$email;
 		$password=$_POST['password'];
 		$salt='$6$okay';
 		
@@ -27,9 +27,9 @@
 					//$_SESSION['active'] = 1;
 					//$_SESSION['username'] = $username;
 					$_SESSION['email'] = $email;
-					header('Location: logged_in.php');
+					header('Location: logged_in.php?msg=congratulations');
 				} else {
-					header('Location: index.php?msg=Username or password is wrong..');
+					header('Location: login-form.php?msg=Username or password is wrong..!');
 					//echo crypt($_POST['password'], $record['salt']);
 					//echo $salt.'</br>';
 					//echo $password.'</br>';

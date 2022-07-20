@@ -17,11 +17,12 @@
                         <li><a href="about.php"> ABOUT <i class="fa fa-bicycle"></i></a></li>
                         <!--<li><a href="login-form.php"> LOGIN <i class="fa fa-user"></i></a></li>-->
                         <?php 
-                            if(isset($_SESSION['email'])){
-                                echo '<li><a href="login-form.php"> ADD <i class="fa fa-plus"></i></a></li>';
-                                echo '<li><a href="logout.php"> LOGOUT <i class="fa fa-user"></i></a></li>';
-                            }else{
+                            if(!isset($_SESSION['email'])){
                                 echo '<li><a href="login-form.php"> LOGIN <i class="fa fa-user"></i></a></li>';
+                                
+                            }else{
+                                echo '<li><a href="add.php"> ADD <i class="fa fa-plus"></i></a></li>';
+                                echo '<li><a href="logout.php"> LOGOUT <i class="fa fa-user"></i></a></li>';
                             }
                         ?>
                     </ul>
