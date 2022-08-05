@@ -1,7 +1,16 @@
 <?php session_start(); ?>
 <?php
 	$error= NULL;
-	if(isset($_POST['submit'])){
+	if(isset($_POST['submit']) && $_POST['g-recaptcha-response'] != "" ){
+		$secret = '6LesNk0hAAAAABd1JWTYGLGnsWD7rYW6hy--5Fpq';
+    	$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
+    	$responseData = json_decode ($verifyResponse);
+
+    if ($response->success){
+
+    }else{
+        header("signup.php?msg=Wrong Captcha Code!");
+    }
 		//$username=$_POST['username'];
 		$email=$_POST['email'];
 		//$_SESSION['email']=$email;
@@ -27,7 +36,7 @@
 					//$_SESSION['active'] = 1;
 					//$_SESSION['username'] = $username;
 					$_SESSION['email'] = $email;
-					header('Location: logged_in.php?msg=congratulations');
+					header('Location: logged_in.php?msgg=congratulations');
 				} else {
 					header('Location: login-form.php?msg=Username or password is wrong..!');
 					//echo crypt($_POST['password'], $record['salt']);
@@ -41,6 +50,8 @@
                  echo "Connection failed: " . $e->getMessage();
             }
 		//}
+		}else{
+			header("Location:login-form.php?msg=Some error occured!");
 		}
 		
 ?>

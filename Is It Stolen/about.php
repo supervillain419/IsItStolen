@@ -13,7 +13,5 @@
                   e-scooter or other objects in our database.</p>
             <button type="button"><a href="https://supervillain419.github.io" target="_blank">Let's talk</a></button>
         </div>
-
     </div>
-
 </section>s

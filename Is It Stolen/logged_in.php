@@ -2,7 +2,9 @@
 include("header.php");
 require("function.php");
 require("con_is_logged_in.php");
-echo_msg();
 ?>
 
-<h1>WELCOME USER!!!!!!!!</h1>
+<h1 id="sig">WELCOME USER!!!!!!!!</h1>
+<?php
+//echo_msg();
+?>

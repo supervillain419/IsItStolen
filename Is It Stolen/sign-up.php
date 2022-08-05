@@ -1,4 +1,5 @@
-<?php include("header.php"); ?>
+<?php include("header.php");
+include("function.php"); ?>
 
 <div class="login-wrapper">
       <form action="signup.php" class="form" method="POST">
@@ -19,10 +20,14 @@
         <div class="input-group">
           <input type="password" name="passwordre" id="pwdre" required/>
           <label for="passwordre">Confirm Password</label>
+          <div class="g-recaptcha" data-sitekey="6LesNk0hAAAAAACcHWLaNgI7zwLeMTv5o7vsJmQ-"></div>
+          </br>
           <p>You already have an account? <a href="login-form.php">Log In</a></p>
           </br>
+          
+          <?php echo_msg();?>
         </div>
-        <input type="submit" name="submit" value="Sign Up" class="submit-btn" />
+        <button type="submit" name="submit" value="Sign Up" class="submit-btn">SIGN UP </button>
       </form>
     </div>
 

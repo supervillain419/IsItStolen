@@ -22,7 +22,7 @@
 			if($_POST['serial-number'] != ""){ //If serial num is not empty!!
 			if ($record['serialnum'] == $serialn) {
 				//$_SESSION['email'] = $email;
-				header('Location: index.php?msg=Serial number exists');
+				header('Location: index.php?msgg=Serial number exists');
 			} else {
 				header('Location: index.php?msg=Serian number does NOT exist!');
 			}

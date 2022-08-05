@@ -13,6 +13,8 @@ require("function.php");
         <div class="input-group">
           <input type="password" name="password" id="pwd" required/>
           <label for="password">Password</label>
+          <div class="g-recaptcha" data-sitekey="6LesNk0hAAAAAACcHWLaNgI7zwLeMTv5o7vsJmQ-"></div>
+          </br>
           <p>You dont have an account? <a href="sign-up.php">Sign Up</a></p>
           </br>
         </div>
